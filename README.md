@@ -1,184 +1,157 @@
 # 📊 Retail Sales Data Analysis & Business Insights
 
-> An end-to-end retail data analytics project that analyzes sales, profit, customers, products, regions, categories, discounts, and time-based trends to generate actionable business insights using Python, Pandas, Matplotlib, and Jupyter Notebook.
+<p align="center">
+  <b>Turning retail data into meaningful insights and smarter business decisions.</b>
+</p>
 
 ---
 
-## 📌 Table of Contents
+## 📌 About the Project
 
-- [Project Overview](#-project-overview)
-- [Business Problem](#-business-problem)
-- [Project Objectives](#-project-objectives)
-- [Project Workflow](#-project-workflow)
-- [Dataset Information](#-dataset-information)
-- [Dataset Columns](#-dataset-columns)
-- [1. Data Loading & Understanding](#1-data-loading--understanding)
-- [2. Data Cleaning](#2-data-cleaning)
-- [3. Feature Engineering](#3-feature-engineering)
-- [4. Exploratory Data Analysis](#4-exploratory-data-analysis)
-- [5. Data Visualization](#5-data-visualization)
-- [6. Business Insights](#6-business-insights)
-- [Business Recommendations](#-business-recommendations)
-- [Key Performance Indicators](#-key-performance-indicators)
-- [Technologies Used](#-technologies-used)
-- [Project Structure](#-project-structure)
-- [Installation](#-installation)
-- [How to Run the Project](#-how-to-run-the-project)
-- [Running the Notebook](#-running-the-notebook)
-- [Expected Outputs](#-expected-outputs)
-- [Project Deliverables](#-project-deliverables)
-- [Skills Demonstrated](#-skills-demonstrated)
-- [Project Limitations](#-project-limitations)
-- [Future Improvements](#-future-improvements)
-- [Conclusion](#-conclusion)
-- [Author](#-author)
+This project presents an end-to-end analysis of retail sales data using **Python and data visualization**.
+
+The analysis explores sales, profit, customer segments, regions, product categories, discounts, and sales trends to identify **business opportunities, profitability challenges, and actionable recommendations**.
+
+The project follows a complete data analytics workflow:
+
+**Data Loading → Data Cleaning → Feature Engineering → EDA → Visualization → Business Insights → Recommendations**
 
 ---
 
-# 📌 Project Overview
+## 🎯 Project Objectives
 
-The **Retail Sales Data Analysis & Business Insights** project is an end-to-end data analytics project developed as part of a data science and machine learning capstone.
-
-The purpose of this project is to transform raw retail transaction data into meaningful business insights.
-
-The analysis focuses on understanding:
-
-- Overall sales performance
-- Overall profitability
-- Product category performance
-- Product subcategory performance
-- Regional performance
-- Customer segment performance
-- Yearly sales trends
-- Monthly sales trends
-- Discount behavior
-- Profitability patterns
-- Loss-making products
-- High-performing products
-- Business opportunities
-- Areas requiring management attention
-
-The project follows a complete analytics workflow starting from **raw data loading**, followed by **data cleaning**, **feature engineering**, **exploratory data analysis**, **visualization**, and finally **business recommendations**.
+- Understand overall retail sales and profitability
+- Identify the best-performing product categories
+- Analyze regional sales and profit performance
+- Compare customer segments
+- Study yearly and monthly sales trends
+- Analyze the relationship between discounts and profit
+- Identify highly profitable and loss-making subcategories
+- Generate practical business recommendations
 
 ---
 
-# 💼 Business Problem
+## 📈 Key Performance Metrics
 
-Retail businesses generate large amounts of transactional data every day.
-
-However, raw transaction records alone do not provide enough information for management to make effective decisions.
-
-A business needs to understand questions such as:
-
-- Which product categories generate the most sales?
-- Which categories generate the most profit?
-- Which regions are performing well?
-- Which customer segments contribute the most revenue?
-- How are sales changing over time?
-- Which months have the highest sales?
-- Which products are generating losses?
-- Is discounting affecting profitability?
-- Which subcategories should receive more attention?
-- Where should management focus improvement efforts?
-- How can the company increase profit without unnecessarily increasing discounts?
-
-This project addresses these questions by analyzing historical retail sales data and converting the results into practical business recommendations.
+| Metric | Value |
+|---|---:|
+| 💰 Total Sales | **$2,296,919.49** |
+| 📊 Total Profit | **$286,409.08** |
+| 📦 Total Quantity Sold | **37,871** |
+| 🧾 Original Records | **9,994** |
+| 🧹 Cleaned Records | **9,993** |
 
 ---
 
-# 🎯 Project Objectives
+## 🔎 Key Business Insights
 
-The main objectives of this project are:
+### 🏆 Technology Leads Performance
 
-### 1. Understand the Dataset
+**Technology** generated the highest sales and profit among the major product categories, making it an important growth area for the business.
 
-Inspect the structure, size, columns, data types, and statistical characteristics of the retail dataset.
+### 🪑 Furniture Has a Profitability Challenge
 
-### 2. Improve Data Quality
+Furniture generated strong sales but significantly lower profit compared with Technology and Office Supplies.
 
-Identify and handle:
+This indicates an opportunity to review pricing, discounts, product mix, and operational costs.
 
-- Missing values
-- Duplicate records
-- Incorrect data types
-- Invalid dates
-- Invalid numeric values
-- Negative sales
-- Negative quantities
-- Invalid discounts
+### 🌎 West is the Strongest Region
 
-### 3. Create Useful Features
+The **West** region generated the highest sales and profit.
 
-Generate additional analytical features such as:
+Its performance can provide useful benchmarks for improving weaker regions.
 
-- Shipping days
-- Order year
-- Order month
-- Order day
-- Profit status
-- Sales per unit
+### 👥 Consumer is the Largest Segment
 
-### 4. Analyze Business Performance
+The **Consumer** segment contributed the highest sales and profit among customer segments.
 
-Calculate important business KPIs such as:
+This makes customer retention and targeted marketing particularly important.
 
-- Total Sales
-- Total Profit
-- Total Quantity
-- Category performance
-- Regional performance
-- Segment performance
+### 📈 Strong Long-Term Sales Growth
 
-### 5. Identify Trends
+Sales increased from approximately **$484K in 2019** to approximately **$733K in 2022**, demonstrating strong overall growth.
 
-Analyze how sales and profit change:
+### 📅 November is the Peak Sales Month
 
-- Across years
-- Across months
-- Across categories
-- Across regions
-- Across customer segments
+**November** recorded the highest monthly sales.
 
-### 6. Identify Business Opportunities
+This creates an opportunity for advance inventory planning, marketing campaigns, and operational preparation.
 
-Find:
+### ⚠️ Loss-Making Subcategories
 
-- High-performing categories
-- High-profit subcategories
-- Loss-making subcategories
-- Strong-performing regions
-- Important customer segments
-- Potential pricing and discount issues
+**Tables** and **Bookcases** were among the weakest subcategories in terms of profitability.
 
-### 7. Provide Business Recommendations
-
-Convert analytical findings into actionable recommendations for improving sales and profitability.
+These products require further investigation into pricing, discounts, shipping costs, and product economics.
 
 ---
 
-# 🔄 Project Workflow
+## 💡 Business Recommendations
 
-The project follows the following end-to-end workflow:
+### 1. 🚀 Invest in High-Performing Technology Products
+Prioritize inventory and marketing for profitable Technology products while maintaining healthy margins.
 
-```text
-Raw Retail Dataset
-        ↓
-Data Loading
-        ↓
-Data Understanding
-        ↓
-Data Quality Checks
-        ↓
-Data Cleaning
-        ↓
-Feature Engineering
-        ↓
-Exploratory Data Analysis
-        ↓
-Data Visualization
-        ↓
-Business Insights
-        ↓
-Business Recommendations
-        ↓
-Final Report
+### 2. 💰 Improve Furniture Profitability
+Review Furniture pricing, discount levels, product mix, and fulfillment costs.
+
+### 3. ⚠️ Investigate Loss-Making Products
+Analyze Tables and Bookcases to identify the causes of negative profitability.
+
+### 4. 🏷️ Optimize Discount Strategy
+Evaluate discounts based on their effect on **profit**, not sales volume alone.
+
+### 5. 🌎 Learn from the West Region
+Identify successful strategies in the West and explore opportunities to apply them to weaker regions.
+
+### 6. 👥 Strengthen Consumer Customer Retention
+Develop targeted promotions and loyalty strategies for the Consumer segment.
+
+### 7. 📅 Prepare for Peak Demand
+Increase inventory and marketing readiness before high-performing periods such as November.
+
+---
+
+# 📊 Visualizations
+
+### Sales by Category
+
+![Sales by Category](outputs/sales_by_category.png)
+
+### Profit by Region
+
+![Profit by Region](outputs/profit_by_region.png)
+
+### Sales by Customer Segment
+
+![Sales by Segment](outputs/sales_by_segment.png)
+
+### Monthly Sales Trend
+
+![Monthly Sales Trend](outputs/monthly_sales_trend.png)
+
+### Discount vs Profit
+
+![Discount vs Profit](outputs/discount_vs_profit.png)
+
+### Top 10 Subcategories by Sales
+
+![Top 10 Subcategories](outputs/top10_subcategories_sales.png)
+
+---
+
+# 🛠️ Tech Stack
+
+- 🐍 **Python**
+- 🐼 **Pandas**
+- 📊 **Matplotlib**
+- 📓 **Jupyter Notebook**
+- 🔧 **Git**
+- ☁️ **GitHub**
+
+---
+
+# ▶️ How to Run the Project
+
+## 1. Clone the Repository
+
+```bash
+git clone https://github.com/Rahul-codehub/Retail-sales-analysis.git
